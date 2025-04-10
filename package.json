@@ -1,0 +1,29 @@
+{
+  "name": "new-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotupro/Test-nodejs.git"
+  },
+  "keywords": [
+    "new",
+    "web"
+  ],
+  "author": "tudo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dotupro/Test-nodejs/issues"
+  },
+  "homepage": "https://github.com/dotupro/Test-nodejs#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9"
+  }
+}
