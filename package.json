@@ -1,9 +1,10 @@
 {
   "name": "new-web",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon --inspect src/index.js",
+    "watch": "sass --watch src/resources/scss/ -o src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +25,10 @@
   "dependencies": {
     "express": "^5.1.0",
     "morgan": "^1.10.0",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "sass": "^1.89.0"
+  },
+  "devDependencies": {
+    "express-handlebars": "^8.0.2"
   }
 }
