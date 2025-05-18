@@ -1,1 +1,19 @@
-<h1>Hello lew lew</h1>
+<div class="container mt-5">
+  <div class="row">
+    {{#each courses}}
+      <div class="col-sm-6 col-md-4 mb-4">
+        <a href="/courses/{{this.slug}}">
+          <img src="{{this.img}}" alt="" width="100%" />
+        </a>
+        <div class="card-body">
+          <a href="/courses/{{this.slug}}"><h5
+              class="card-title"
+            >{{this.name}}</h5></a>
+          <p class="card-text">{{this.description}}</p>
+        </div>
+        <button class="buy-btn">Buy course</button>
+      </div>
+    {{/each}}
+
+  </div>
+</div>

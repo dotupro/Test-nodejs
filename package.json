@@ -24,11 +24,14 @@
   "description": "",
   "dependencies": {
     "express": "^5.1.0",
+    "mongoose": "^8.15.0",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.9",
     "sass": "^1.89.0"
   },
   "devDependencies": {
-    "express-handlebars": "^8.0.2"
+    "express-handlebars": "^8.0.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0"
   }
 }
