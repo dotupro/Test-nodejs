@@ -2,6 +2,7 @@ const express = require("express");
 const { engine } = require("express-handlebars"); // ✅ Sửa tại đây
 const path = require("path");
 const morgan = require("morgan");
+const methodOverride = require("method-override");
 const app = express();
 const port = 3000;
 const route = require("./routes");
@@ -19,10 +20,16 @@ app.engine(
   "hbs",
   engine({
     extname: ".hbs", // Khai báo đuôi file nếu bạn dùng .hbs thay vì .handlebars
+    helpers: {
+      sum: (a, b) => a + b,
+    },
   })
 );
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "resources", "views"));
+
+// HTTP method override
+app.use(methodOverride("_method"));
 
 route(app);
 
