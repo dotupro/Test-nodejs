@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="/">Prider</a>
+    <a class="navbar-brand me-auto" href="/">Prider</a>
+    <!-- Added 'me-auto' -->
     <button
       class="navbar-toggler"
       type="button"
@@ -14,30 +15,26 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-
+      <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
-            id="navbarDropdown"
             role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
+            data-bs-toggle="dropdown"
             aria-expanded="false"
           >
             Prider
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/courses/create">Create Course</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/me/stored/courses">My Course</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Log out</a>
-          </div>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/courses/create">Create Course</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="/me/stored/courses">My Course</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Log out</a></li>
+          </ul>
         </li>
       </ul>
-
     </div>
   </div>
 </nav>
