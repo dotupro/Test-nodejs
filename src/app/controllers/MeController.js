@@ -7,7 +7,10 @@ const {
 class MeController {
   // GET /me/stored/courses
   storedCourses(req, res, next) {
-    Promise.all([Course.find({}), Course.countDocumentsDeleted()])
+    Promise.all([
+      Course.find({}),
+      Course.countDocumentsDeleted({ deletedAt: { $ne: null } }),
+    ])
       .then(([courses, deletedCount]) =>
         res.render("me/stored-courses", {
           deletedCount,
